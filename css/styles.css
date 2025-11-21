@@ -141,7 +141,7 @@ body {
 .users__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
+  gap: 18px;
 }
 
 .users__empty {
@@ -157,6 +157,7 @@ body {
   padding: 16px 16px 14px;
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
   gap: 14px;
   align-items: center;
   transition: transform var(--duration), border-color var(--duration), box-shadow var(--duration);
@@ -211,6 +212,47 @@ body {
   word-break: break-all;
 }
 
+.user-card__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.user-card__upload {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(124, 58, 237, 0.15);
+  color: #f8fafc;
+  border: 1px solid rgba(124, 58, 237, 0.35);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background var(--duration), transform var(--duration), border-color var(--duration);
+}
+
+.user-card__upload:hover {
+  background: rgba(124, 58, 237, 0.22);
+  border-color: rgba(124, 58, 237, 0.5);
+  transform: translateY(-1px);
+}
+
+.user-card__upload:focus-within {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.user-card__file {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 @media (max-width: 640px) {
   .page {
     padding: 18px 12px 28px;
@@ -235,5 +277,9 @@ body {
   .user-card__photo {
     width: 64px;
     height: 64px;
+  }
+
+  .user-card__actions {
+    margin-top: 2px;
   }
 }
