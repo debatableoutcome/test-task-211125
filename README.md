@@ -22,5 +22,7 @@
 - `screenshots/desktop.png`, `screenshots/mobile.png` — поместите сюда скриншоты для отображения в README.
 
 ## Скриншоты
+
+
 ![Десктоп](screenshots/desktop.png)
 ![Мобильный](screenshots/mobile.png)
