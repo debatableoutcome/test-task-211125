@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Directory</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page">
+<div class="app">
+<header class="app__header">
+<div class="app__branding">
+<p class="app__eyebrow">People manager</p>
+<h1 class="app__title">User Directory</h1>
+<p class="app__subtitle">Browse and manage the team from any device.</p>
+</div>
+</header>
+<section class="app__controls controls" aria-label="User controls">
+<div class="controls__group">
+<label class="controls__label" for="filter-age">Show only users older than 18</label>
+<input class="controls__checkbox" type="checkbox" id="filter-age" name="filter-age">
+</div>
+<div class="controls__group controls__group--stacked">
+<label class="controls__label" for="sort-name">Sort by name</label>
+<select class="controls__select" id="sort-name" name="sort-name">
+<option value="name-asc">A to Z</option>
+<option value="name-desc">Z to A</option>
+</select>
+</div>
+<div class="controls__group controls__group--stacked">
+<label class="controls__label" for="sort-age">Sort by age</label>
+<select class="controls__select" id="sort-age" name="sort-age">
+<option value="age-asc">Youngest first</option>
+<option value="age-desc">Oldest first</option>
+</select>
+</div>
+</section>
+<main class="app__main">
+<section class="users" aria-live="polite">
+<div class="users__grid" id="user-list"></div>
+</section>
+</main>
+</div>
+<script src="js/app.js" defer></script>
+</body>
+</html>
